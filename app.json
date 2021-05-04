@@ -41,10 +41,7 @@
 				"description": "Api_id",
 				"value":""
 			},
-			"key": {
-				"description": "key",
-				"value":""
-			},
+
 			"git_admin": {
 				"description": "git_admin",
 				"value":""
