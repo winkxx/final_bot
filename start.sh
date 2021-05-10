@@ -23,11 +23,13 @@ chmod 0777 /tracker.sh
 git clone "https://${git_admin}:${git_pass}@github.com/666wcy/new_bot"  >> /dev/null 2>&1
 mkdir /bot/
 mv /new_bot/bot/* /bot/
+cp /new_bot/nginx.conf /etc/nginx/
 chmod 0777 /bot/ -R
 rm -rf /new_bot
-
+python3 /bot/nginx.py
+nginx -s reload
 
 nohup aria2c --conf-path=/root/.aria2/aria2.conf --rpc-listen-port=8080 --rpc-secret=$Aria2_secret &
-nohup python3 /bot/web.py &
+#nohup python3 /bot/web.py &
 
 python3 /bot/main.py
