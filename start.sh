@@ -15,17 +15,18 @@ chmod 0777 /root/.aria2/ -R
     "port": 9184,
     "baseURL": "",
     "address": "127.0.0.1",
+    "password":"$Aria2_secret",
     "log": "stdout",
     "database": "/etc/filebrowser/database.db",
     "root": "/"
 }
 		EOF
 
-rm /etc/filebrowser/database.db
+#rm /etc/filebrowser/database.db
 filebrowser -d /etc/filebrowser/database.db config init
 filebrowser -d /etc/filebrowser/database.db config set --locale zh-cn
 
-filebrowser -d /etc/filebrowser/database.db users add root '${Aria2_secret}' --perm.admin
+#filebrowser -d /etc/filebrowser/database.db users add root '${Aria2_secret}' --perm.admin
 nohup  filebrowser -c /etc/filebrowser/filebrowser.json  &
 
 
