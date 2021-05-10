@@ -21,11 +21,11 @@ chmod 0777 /root/.aria2/ -R
 }
 		EOF
 
-#rm /etc/filebrowser/database.db
-#filebrowser -d /etc/filebrowser/database.db config init
-#filebrowser -d /etc/filebrowser/database.db config set --locale zh-cn
+rm /etc/filebrowser/database.db
+filebrowser -d /etc/filebrowser/database.db config init
+filebrowser -d /etc/filebrowser/database.db config set --locale zh-cn
 
-#filebrowser -d /etc/filebrowser/database.db users add root '${Aria2_secret}' --perm.admin
+filebrowser -d /etc/filebrowser/database.db users add root '${Aria2_secret}' --perm.admin
 nohup  filebrowser -c /etc/filebrowser/filebrowser.json  &
 
 
