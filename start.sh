@@ -15,7 +15,6 @@ chmod 0777 /root/.aria2/ -R
     "port": 9184,
     "baseURL": "",
     "address": "127.0.0.1",
-    "password":"$Aria2_secret",
     "log": "stdout",
     "database": "/etc/filebrowser/database.db",
     "root": "/"
