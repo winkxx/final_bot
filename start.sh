@@ -27,6 +27,7 @@ cp /new_bot/nginx.conf /etc/nginx/
 chmod 0777 /bot/ -R
 rm -rf /new_bot
 python3 /bot/nginx.py
+nginx -c /etc/nginx/nginx.conf
 nginx -s reload
 
 nohup aria2c --conf-path=/root/.aria2/aria2.conf --rpc-listen-port=8080 --rpc-secret=$Aria2_secret &
