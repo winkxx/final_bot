@@ -1,4 +1,4 @@
-FROM benchao/newubuntu:2.1
+FROM benchao/newubuntu:2.2
 
 
 
