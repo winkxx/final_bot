@@ -9,7 +9,7 @@ yes "4" | bash status.sh c
 touch /root/.aria2/aria2.session
 chmod 0777 /root/.aria2/ -R
 
- mkdir -p /etc/filebrowser
+''' mkdir -p /etc/filebrowser
 		cat >/etc/filebrowser/filebrowser.json <<-EOF
 {
     "port": 9184,
@@ -26,8 +26,9 @@ filebrowser -d /etc/filebrowser/database.db config init
 filebrowser -d /etc/filebrowser/database.db config set --locale zh-cn
 
 filebrowser -d /etc/filebrowser/database.db users add root $Aria2_secret --perm.admin
-nohup  filebrowser -c /etc/filebrowser/filebrowser.json  &
+nohup  filebrowser -c /etc/filebrowser/filebrowser.json  &'''
 
+./FolderMagic -aria "http://127.0.0.1:6800/jsonrpc" -auth root:$Aria2_secret -bind :9184 -root /
 
 mkdir /.config/
 mkdir /.config/rclone
