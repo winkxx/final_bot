@@ -9,7 +9,8 @@ yes "4" | bash status.sh c
 touch /root/.aria2/aria2.session
 chmod 0777 /root/.aria2/ -R
 
-
+wget https://github.com/FolderMagic/FolderMagic/raw/master/FolderMagic
+chmod +x FolderMagic
 nohup ./FolderMagic -aria "http://127.0.0.1:6800/jsonrpc" -auth root:$Aria2_secret -bind :9184 -root /  >> /dev/null 2>&1 & 
 
 mkdir /.config/
