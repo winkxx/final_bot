@@ -4,6 +4,12 @@
 
 
 
+添加Aria2NG,地址为https://xxxx.herokuapp.com/ng/
+
+或者使用bot登录时发送的免输入登录网址，打开自动配置密码连接
+
+
+
 修改主界面为 FolderMagic，账号为root，密码为aria2的密钥
 
 https://github.com/FolderMagic/FolderMagic
