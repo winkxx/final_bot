@@ -26,8 +26,9 @@ git clone "https://${git_admin}:${git_pass}@github.com/666wcy/new_bot"  >> /dev/
 mkdir /bot/
 mv /new_bot/bot/* /bot/
 cp /new_bot/nginx.conf /etc/nginx/
-cp /new_bot/index.html /root/
-chmod 0777 /root/index.html
+mkdir /index/
+cp /new_bot/index.html /index/
+chmod 0777 /index/index.html
 chmod 0777 /bot/ -R
 rm -rf /new_bot
 python3 /bot/nginx.py
